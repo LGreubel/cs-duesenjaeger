@@ -8,4 +8,4 @@ Product Owner:  Lucas Greubel
 
 Scrum Master: Marvin Rentsch (Vize)
 
-Developer:      Maximilian Krönung
+Developer:      Maximilian Krönung, Kevin Spomer, Laurin Ludwig
