@@ -15,8 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Headerdateien</Filter>
+    <ClCompile Include="commands.c">
+      <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
   </ItemGroup>
 </Project>
