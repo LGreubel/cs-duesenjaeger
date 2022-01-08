@@ -2,22 +2,22 @@
 #include <stdbool.h>
 #include <string.h>
 
-int credits() { 
-	printf("cs-duesenjaeger\n");
-	printf("--- Projektlead\n");
-    printf("	--- Lucas G.\n");
-    printf("\n");
+int credits() {
+    FILE *fp;
+    int c;
 
-	printf("--- Development management\n");
-	printf("--- Marvin R.\n");
-	printf("\n");
-
-	printf("--- Development\n");
-	printf("	--- Maximilian K. x Kevin S. x Laurin L.\n");
-	printf("\n");
-
-	return 0;
+    fp = fopen("credits2.txt","r");
+    while(1) {
+        c = fgetc(fp);
+        if( feof(fp) ) {
+            break;
+        }
+        printf("%c", c);
+    }
+    fclose(fp);
+    return 0;
 }
+
 int savegameCreate() { //Unfinnished
 	//freopen("Text.txt", "r",stdin);
 	return 0;
