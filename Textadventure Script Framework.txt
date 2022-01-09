@@ -230,7 +230,7 @@ It is full to the brim with blessed water.
 
 > You step into the empty chapel...
 
->Use drinking flask(lose "drinking flask" || get "holy water"
+>Use drinking flask(lose "drinking flask" || get "holy water")
 You fill your flask with the holy water
 
 Go West
@@ -296,6 +296,7 @@ Items
 -
 *Characters
 Evil Wizard
+Wizard
 Priest 
 Blacksmith
 Zombie	
