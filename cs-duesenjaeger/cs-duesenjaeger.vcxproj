@@ -143,6 +143,7 @@
     <ClCompile Include="main.c">
       <DeploymentContent>false</DeploymentContent>
       <FileType>CCode</FileType>
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</SDLCheck>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,19 @@
 #include <stdbool.h>
 #include <string.h>
 
+int commands() { 
+	char commands[2][20] = {"/help", "/quit"};
+	char userInput[20];
+	fgets(userInput, 20, stdin);
+
+	//if (strcmp(commands[1][20], userInput)) return 1337;
+
+	printf("%s", userInput);
+	return 0; 
+}
+
+
+
 int credits() {
     FILE *fp;
     int c;
@@ -31,9 +44,10 @@ int savegameCreate() { //Unfinnished
 //};
 
 int main() {
-	credits();
-	printf("[0] - Create savefile.\n");
-    printf("[1] - Load savefile.\n");
+	int game = 0;
+	//credits();
+	//printf("[0] - Create savefile.\n");
+    //printf("[1] - Load savefile.\n");
 
 	/* 
 	 * 
@@ -50,10 +64,8 @@ int main() {
 	printf("Type '/help' to list all commands.");
 
 	//Gameloop
-	while (true) {
-          savegameCreate();
-          break;
+        while (game != 1337) {
+          game = commands();
 	}
-	
 	return 0;
 }
