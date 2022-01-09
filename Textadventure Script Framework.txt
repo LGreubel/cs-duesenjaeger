@@ -2,52 +2,68 @@ Source: https://fallout.fandom.com/wiki/Hubris_Comics_terminal_entries_(Fallout_
 
 Script (etwas erweitert und verändert):
 #NOTES
-`talking to the blacksmith can be done in a different order, but needs "valuables" and always gives "magical sword" at the end
-after you give him the three needed items´
+*Changes
+`things marked with an "!" are interactable objects´
 `villain "grelok" renamed into "evil wizard"´
 `added item "valuables", "holy water"´
-`unsure what to do with item "holy water" maybe use it on blacksmith to reveal he is an werewolf or something (easter egg)´
+
+*Script Notes
+`talking to the blacksmith can be done in a different order, but needs "valuables" and always gives "magical sword" at the end
+after you give him the three needed items´
+`unsure what to do with item "holy water" 1.maybe use it on some character to reveal that they are an werewolf or something as an easter egg´
+                                          2.make it necessary to defeat the evil wizard -> make him a demon or something
+*(not added)Features 
 `would like to add a "pond" and a "fishing rod" at some point´
 'need to add dialogue for actions that do nothing: for example going south of the town'
 for the moment:
-ACTIONS that do not work answer this:
+ACTIONS that do not work should answer this:
 'go:   you can't go there'
 'talk: you can't talk to that'
 'use:  you can't use that'
+'look: you can't look at that'
+'take: you can't take that'
 
+*Short Story
+                                  mountainside
+                                       ^ north
+                        east           |         west
+Short Form: Map:  Chapel <--        Plains      --> Swamp
+                                       |
+                                       v south
+                                     town
+                                     
+Short Guide:   Slay evil wizard -> win game
+               -> get "raw gem" at Mountainside 
+               -> go to Swamp get "magical shard", "refined gem" & "valuables" from wizard
+               -> go to blacksmith get "magical sword" lose "rusty sword" "magical shard", "refined gem" & "valuables"
+               -> go to mountainside, use magical sword on wizard
+               
+   
+   
 #SCRIPT
-(Plains) Look Around
-
+(Plains) 
 You are standing in a wide plain. 
+> Look around
+You examine your surroundings... 
 Foothills stretch to the north, where clouds gather around an ominous peak. 
 A dirt path winds from a lonely chapel to the east, through the plains where you're standing, and south into a bustling town.
 Wispy mists gather over marshland in the west, where a thin tower stands alone in the bog.
 
-> You examine your surroundings...
 Go North
+> You walk to the north....
 
 (Mountainside)
-Grelok is here, spewing heresies.
-(Mountainside) Look Around
-
-You are on the craggy, windblasted face of a mountain. 
-Stormclouds coil above the summit, pelting you and the sparse vegetation with torrential downpour. 
-Far below, beyond the foothills, a wide plain stretches across the southern horizon.
-
-The evil wizard is here, spewing heresies.
-
-A glint between the rocks catches your eye.
-
-> You examine your surroundings...
-(Mountainside) Look Around
-
+>Look around
+You examine your surroundings...
 You are on the craggy, windblasted face of a mountain.
 Stormclouds coil above the summit, pelting you and the sparse vegetation with torrential downpour.
 Far below, beyond the foothills, a wide plain stretches across the southern horizon.
 
+!A glint between the rocks catches your eye.
+
 !The Wizard is here, spewing heresies.
 
-Take glinting object
+Use glinting object
 > You take a rough gemstone from the rocks
 
 Use Sword on Evil Wizard
@@ -78,7 +94,7 @@ The huge man swipes sweat from his bald head and looks up from his work.
 Leave me to filling my orders, stranger." 
 With that, the blacksmith dismisses you from his tent and douses a hot blade in water, hissing with steam.
 
-> Talk with the priest
+> Talk to the priest
 
 The priest notices your approach and looks up from his swilling.
 "Our time has come, and we are forsaken!", he cries. "Urp!", he continues.
@@ -243,8 +259,8 @@ Go West
 When you draw your sword, the evil wizard lowers his great horned head and bellows laughter in your face. 
 You grit your teeth and swing a mighty two-handed blow, the magical blade ringing clearly, even amid the tumult of throaty cackling.
 You swing the sword so fiercely, it escapes your grip and hurtles into the open maw of the monstrosity,
-lost from sight in the arid darkness of Grelok's throat.
-You step back as Grelok jerks his mouth shut and stands upright. He is still for a moment, then starts clawing at his neck. 
+lost from sight in the arid darkness of the wizards throat.
+You step back as the wizard jerks his mouth shut and stands upright. He is still for a moment, then starts clawing at his neck. 
 Muffled, a ringing can be heard as if from a great distance.
 
 Suddenly, the wizard's chest bursts in a fount of viscous, green blood. 
@@ -289,12 +305,14 @@ Valuables
 >Go 
 North, South, West, East
 
->Use Items
+>Use 
 
 >Talk
-Items
--
+
+>Look
+
 *Characters
+
 Evil Wizard
 Wizard
 Priest 
