@@ -3,13 +3,38 @@
 #include <string.h>
 
 int commands() { 
-	char commands[2][20] = {"/help", "/quit"};
-	char userInput[20];
-	fgets(userInput, 20, stdin);
+	char help	[] = "/help";
+	char quit	[] = "/quit";
+	char go		[] = "/go";
+    char use	[] = "/use";
+    char talk	[] = "/talk";
 
-	//if (strcmp(commands[1][20], userInput)) return 1337;
+	char userInput[] = "";
+	//fgets(userInput, 20, stdin);
+	scanf("%s", &userInput);
+
+	if (strcmp(quit, userInput) == 0) {
+          printf("The Game will shut down now.\n");
+          return 1337;
+	}
+	else if (strcmp(help, userInput) == 0) {
+		printf("\n");
+		printf("/help	- This command here duh\n");
+		printf("/quit	- quits the game.\n");
+        printf("\n");
+        printf("go		- \n");
+        printf("use		- \n");
+        printf("talk	- \n");
+        printf("take	- \n");
+        printf("\n");
+        return 0;
+	} 
+	else if (strcmp(go,userInput) == 0) return 1;
+	else if (strcmp(use, userInput) == 0) return 2;
+	else if (strcmp(talk, userInput) == 0) return 3;
 
 	printf("%s", userInput);
+    printf("%s", quit);
 	return 0; 
 }
 
@@ -44,28 +69,24 @@ int savegameCreate() { //Unfinnished
 //};
 
 int main() {
-	int game = 0;
-	//credits();
+	int gameStatus = 0;
+	credits();
 	//printf("[0] - Create savefile.\n");
     //printf("[1] - Load savefile.\n");
 
 	/* 
-	 * 
 	 * Falls im Archiv des Spieles noch kein Savegame erstellt worden ist, 
 	 * soll direkt der Dialog zur Erstellung eines Saves ersteinen.
 	 * 
 	 * Wird ein Save gefunden, soll man in den auswahl "Bildschrim" kommen.
 	 * Hier sind alle Saves aufgelistet mit dem Save "neues Spiel erstellen.
-	 * 
-	 * ichmagpfusch:
-	 * goto ichmagpfusch;
 	 */ 
 
-	printf("Type '/help' to list all commands.");
+	printf("Type '/help' to list all commands.\n");
 
-	//Gameloop
-        while (game != 1337) {
-          game = commands();
+	while (gameStatus != 1337) { //Gameloop
+		gameStatus = commands();
+		printf("command %d executed.\n", gameStatus);
 	}
 	return 0;
 }
