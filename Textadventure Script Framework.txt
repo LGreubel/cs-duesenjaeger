@@ -1,0 +1,301 @@
+Source: https://fallout.fandom.com/wiki/Hubris_Comics_terminal_entries_(Fallout_3)#Reign_of_Grelok_.28beta.29
+
+Script (etwas erweitert und verändert):
+#NOTES
+`talking to the blacksmith can be done in a different order, but needs "valuables" and always gives "magical sword" at the end
+after you give him the three needed items´
+`villain "grelok" renamed into "evil wizard"´
+`added item "valuables", "holy water"´
+`unsure what to do with item "holy water" maybe use it on blacksmith to reveal he is an werewolf or something (easter egg)´
+`would like to add a "pond" and a "fishing rod" at some point´
+'need to add dialogue for actions that do nothing: for example going south of the town'
+for the moment:
+ACTIONS that do not work answer this:
+'go:   you can't go there'
+'talk: you can't talk to that'
+'use:  you can't use that'
+
+#SCRIPT
+(Plains) Look Around
+
+You are standing in a wide plain. 
+Foothills stretch to the north, where clouds gather around an ominous peak. 
+A dirt path winds from a lonely chapel to the east, through the plains where you're standing, and south into a bustling town.
+Wispy mists gather over marshland in the west, where a thin tower stands alone in the bog.
+
+> You examine your surroundings...
+Go North
+
+(Mountainside)
+Grelok is here, spewing heresies.
+(Mountainside) Look Around
+
+You are on the craggy, windblasted face of a mountain. 
+Stormclouds coil above the summit, pelting you and the sparse vegetation with torrential downpour. 
+Far below, beyond the foothills, a wide plain stretches across the southern horizon.
+
+The evil wizard is here, spewing heresies.
+
+A glint between the rocks catches your eye.
+
+> You examine your surroundings...
+(Mountainside) Look Around
+
+You are on the craggy, windblasted face of a mountain.
+Stormclouds coil above the summit, pelting you and the sparse vegetation with torrential downpour.
+Far below, beyond the foothills, a wide plain stretches across the southern horizon.
+
+!The Wizard is here, spewing heresies.
+
+Take glinting object
+> You take a rough gemstone from the rocks
+
+Use Sword on Evil Wizard
+> Your puny weapons are useless against the Wizard
+
+Go South
+> You retreat to the south....
+
+Go South
+(Town) 
+>Look Around
+You're standing in the dusty market square of a quiet town.
+Many of the shops and homes lie abandoned,
+and the citzens that can be seen speak in hushed voices,
+casting furtive glances at the darkened skyline in the distant north.
+The ringing of an anvil breaks the silence regularly, where a mustachioed blacksmith bends over his work in a nearby tent.
+
+!The blacksmith is here, working.
+
+!A priest is here, drinking.
+
+> Talk to the blacksmith
+
+Your eyes water from the smoke and smarmy heat inside the tent.
+The huge man swipes sweat from his bald head and looks up from his work.
+
+"There's no shortage of work to be done with the Evil Wizard scarin' everyone witless.
+Leave me to filling my orders, stranger." 
+With that, the blacksmith dismisses you from his tent and douses a hot blade in water, hissing with steam.
+
+> Talk with the priest
+
+The priest notices your approach and looks up from his swilling.
+"Our time has come, and we are forsaken!", he cries. "Urp!", he continues.
+
+As you recover from the stench of the priestly belch, you are told that the priest has fled from his nearby chapel.
+When the Evil Wizard arrived on the mountain, the dead in his cemetery began to rise, and his congregation scattered.
+
+Task: "If you could rid the place of the zombies", he tells you, "I'll give you the key, and you can help yourself to the apothecary"
+
+Go East
+You walk to the east...
+
+(Chapel) 
+>Look Around
+You stand at the end of a dirt path, facing a small chapel.
+The stucco walls are faded, many roof tiles are missing.
+The great oaken doors are locked. The congregation is nowhere to be found.
+A small cemetery of crooked headstones lies in the shadow of the cracked steeple.
+The dirt path winds westward through a great, featureless plain.
+
+!A zombie totters aimlessly nearby.
+
+!There is an open grave nearby.
+
+>Use Sword Zombie
+Your blow knocks the zombie into a grave.
+
+>Examine the Grave
+You peer into the open grave...
+There is a deep, empty grave in the cemetery.
+Several bloated rats floating in a foot of filthy water at the bottom.
+Don't fall in!
+
+!A grotesque zombie head is stuck on a root near the top of the grave.
+
+>Take Head
+You bag the horrific trophy as proof of your deed.
+
+Go West
+> You walk to the west...
+
+(Swamp) Look Around
+
+You are standing on a narrow stone path in a dark marsh.
+Greasy bubbles float to the top of the bog-waters on either side and pop lazily, spattering your legs with muck and slime.
+A short, stone tower squats here. No door is visible, and the stones are smooth and polished.
+A balcony juts out midway up the tower's face. The heady smells of incense mix with the nauseating stench of the swamp.
+The stone path unfurls eastward, towards a broad plain beyond the marshes.
+
+!A wizard is here, gesticulating wildly from his balcony.
+
+>Talk to the wizard
+
+The wizard beckons wildly at you from his balcony.
+"You're here, you've arrived!", he exclaims.
+After an awkward silence, he jabs an excited finger into a crystal ball, nearly knocking it into the bog.
+
+"I've seen, you see. You're the one to defeat the Wizard. Hoo-hoo!" The little man hops onto the railing, spinning a pirouette.
+"Now the time's come to play my part. Toss up the gem!"
+
+The wizard's brow furrows. "Got things a bit out of order, have I? Come back when you've got a powerful gemstone.
+Soon - I've never got to fulfill a prophecy before!"
+
+>Talk to the wizard (after taliking to him once without the gem)
+
+The wizard is shooing you away, his sleeves flopping about.
+
+"Go! Find the gemstone and return, so I can play my part!"
+
+>Use Gem Wizard (lose "raw gem" || get "refined gem" and "magical shard")
+
+"Hoo-hoo! The slayer of the Wizard approaches, raw stone in hand, just as I've seen!"
+The wizard's pointy hat bobs excitedly as he points a finger at you.
+Suddenly, a pale orange arc of light extends from the knobby finger and draws the gemstone from your bag before you can react.
+The gemstone halts and hovers in the air before the wizard's nose.
+
+"Essence be true, powers renew, Fatty-Hoo-Do!"
+With that, he slaps the hovering stone, smashing it against the smooth stone of the tower.
+In a burst of light, the stone splits into two, and one lands in each outstretched palm of the hopping little wizard.
+
+"Shard for the sword. Wrap her in iron and she'll find the evil wizards black heart for you. Take some valuables too.
+You'll need payment for a smith to forge the weapon." He tosses the stones down which you leap forward to catch safely.
+
+>Talk to the wizard (after taking the gem and shard)
+"Get you to a smithy! Forge the shard with sword, and defeat the evil wizard.
+
+The wizard tosses some pebbles down to shoo you away and busies himself conjuring colored puffs of smoke.
+
+>Go East
+You walk to the east...
+(plains)
+
+>Go South
+You walk to the south...
+(town)
+
+>Use valuables on blacksmith(lose "valuables")
+He squints this eye at the little pouch you give him, opens it, looks at you in disbelieve.
+After composing himself he asks "What would you be needin', then?"
+
+> Use Rusty Sword on Blacksmith(lose "rusty sword")
+The blacksmith examines your rusty sword and frowns a bit.
+
+> Use Refined Gem on Blacksmith(lose "refined gemstone")
+"A right fine stone, that is." He says, admiring the faceted stone.
+
+>Use the magical shard on Blacksmith(lose "magical shard" || get "magical sword")
+Following your careful instructions, the smithy re-forges your rusty sword with the magical shard at the center of the blade
+
+>Use Zombiehead on Priest
+
+The priest drunkenly curses the undead who have defiled his church. You present him with the decapitated zombie head from your bag.
+
+"Praise you!", he hiccups. "Perhaps the wizards influence isn't so strong!".
+With that, he turns his decanter over on the head and tosses into a fireplace,
+where it bursts into purple flame and burns up almost instantly.
+
+"I must gather the faithful." He presses a brass key into your palm,
+"Please, help yourself to what little may be of use at my chapel."
+
+> Speak with the priest
+
+The priest is drinking water, poring over a thick, leatherbound volume connected by a thick leather thong to his neck.
+He notices you only when you've come very close.
+
+"Ah, good friend! Have you gone ahead to open the chapel?
+My body still aches with drink, I'm afraid, but soon I will gather the congregation and return myself."
+
+Go North
+
+> You walk to the north...
+Go East
+(Chapel) 
+
+>Use Door
+The door is locked and does not bulge an inch...
+
+>Use Key on Chapel (lose "key")
+The chapel doors are unlocked.
+
+> You examine your surroundings...
+Look at Chapel
+
+Dust motes hang lazily in the shafts of colored light stretching across the chapel from peaked windows.
+The pews, pulpit, and everything else are covered in a fine mist. There is a very deep stone cistern near the entrance. 
+It is full to the brim with blessed water.
+
+!There is more than enough water here to fill your tiny flask.
+
+> You step into the empty chapel...
+
+>Use drinking flask(lose "drinking flask" || get "holy water"
+You fill your flask with the holy water
+
+Go West
+
+> You walk to the west...
+
+
+>Use Magic Sword on evil wizard
+
+When you draw your sword, the evil wizard lowers his great horned head and bellows laughter in your face. 
+You grit your teeth and swing a mighty two-handed blow, the magical blade ringing clearly, even amid the tumult of throaty cackling.
+You swing the sword so fiercely, it escapes your grip and hurtles into the open maw of the monstrosity,
+lost from sight in the arid darkness of Grelok's throat.
+You step back as Grelok jerks his mouth shut and stands upright. He is still for a moment, then starts clawing at his neck. 
+Muffled, a ringing can be heard as if from a great distance.
+
+Suddenly, the wizard's chest bursts in a fount of viscous, green blood. 
+The Ringing can be heard clearly now, and as thick lifeblood oozes around the protruding tip of the magic sword,
+the stormclouds swirling the peak are already clearing. The evildoer is defeated!
+
+            THE END
+
+*Inventory
+Rusty Sword
+> Your weapon. Rusty, but trusty.
+
+Drinking Flask
+> A very small flask to carry water.
+
+Holy Water
+> Your flask filled with holy water from the chapel.
+
+Zombie Head
+> The smell may make you unpopular...
+
+Refined Gemstone
+> A brilliant, faceted gemstone
+
+Magical Shard
+> The gem shard pulses with magical light...
+
+Magic Sword
+> An enchanted weapon to defeat Grelok
+
+Brass Key
+> Key given to you by the priest
+
+Raw Gemstone
+> This gemstone may be valuable...
+
+Valuables
+> A little pouch containing gold coins and small gems
+
+*Actions
+ 
+>Go 
+North, South, West, East
+
+>Use Items
+
+>Talk
+Items
+-
+*Characters
+Evil Wizard
+Priest 
+Blacksmith
+Zombie	
