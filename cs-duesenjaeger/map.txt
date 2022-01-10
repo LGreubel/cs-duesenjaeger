@@ -1,0 +1,7 @@
+             Mountainside
+                  ^ north
+      east        |         west
+Chapel <--      Plains      --> Swamp
+                  |
+                  v south
+                 Town
