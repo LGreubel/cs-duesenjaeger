@@ -20,8 +20,6 @@ bool eastAvailable = true;
 bool westAvailable = true;
 
 
-
-
 //open the map
 int openMap(){
     FILE *fp;
@@ -119,13 +117,13 @@ int commands(){
         char *keywordName1 = strstr(userInput, name1); //search for keyword in user input
         if (keywordName1 != NULL && name1Available == true){              //check if character is available in this location
             printf("You talk to **name1**.\n");
-            return 21;
+            return 20;
         }
         char name2[] = "Name2";  //keyword
         char *keywordName2 = strstr(userInput, name2); //search for keyword in user input
         if (keywordName2 != NULL && name2Available == true){              //check if character is available in this location
             printf("You talk to **name2**.\n");
-            return 22;
+            return 21;
         }
         //else - nobody available to talk
         printf("nobody there to talk.\n");
@@ -147,28 +145,28 @@ int commands(){
         char *keywordUp = strstr(userInput, up); //search for keyword in user input
         if (keywordUp != NULL && upAvailable == true){
             printf("You look up.\n");
-            return 41;
+            return 40;
         }
 
         char down[] = "down";  //keyword
         char *keywordDown = strstr(userInput, down); //search for keyword in user input
         if (keywordDown != NULL && downAvailable == true){
             printf("You look down.\n");
-            return 42;
+            return 41;
         }
 
         char left[] = "left";  //keyword
         char *keywordLeft = strstr(userInput, left); //search for keyword in user input
         if (keywordLeft != NULL && leftAvailable == true){
             printf("You look to the left.\n");
-            return 43;
+            return 42;
         }
 
         char right[] = "right";  //keyword
         char *keywordRight = strstr(userInput, right); //search for keyword in user input
         if (keywordRight != NULL && rightAvailable == true){
             printf("You look to the right.\n");
-            return 44;
+            return 43;
         }
         //else - not a preset direction
         printf("nothing there.\n");
@@ -218,6 +216,17 @@ int credits() {
     fclose(fp);
     return 0;
 }
+
+
+/*return values
+ *
+ * go                   talk            use         look            misc
+ * south    10          Name1   20                  up      40      unknown command 99
+ * north    11          Name2   21                  down    41
+ * west     12                                      left    42
+ * east     13                                      right   43
+ */
+
 
 int savegameCreate() { //Unfinnished
     //freopen("Text.txt", "r",stdin);
