@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="commands.c" />
     <ClCompile Include="main.c">
       <DeploymentContent>false</DeploymentContent>
       <FileType>CCode</FileType>
@@ -148,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="commands.h" />
+    <ClInclude Include="credits.h" />
+    <ClInclude Include="openmap.h" />
+    <ClInclude Include="savegame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
