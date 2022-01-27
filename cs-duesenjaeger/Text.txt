@@ -1,0 +1,138 @@
+(Plains) Look around
+You look around...
+
+As you are standing on a great plain you can only see the blue sky with clouds.
+After looking around, you recognize a dark cave in the north.
+In the west you can see a peaky castle behind some mountains.
+A misty and dead forest stretches across the southern horizon and a barn made out of porous wood in the east.
+
+A sparkle between the trees in the south catches your eye.
+
+> Go South
+
+(Forest) Look around
+You look around...
+
+!Ghorkan, the Master of Forest, is here.
+
+Your measly sword is useless against the evil Ghorkan and you are cursed by a ban.
+
+> Go East
+
+(Barn) Look around
+You look around...
+
+!Typhon, a shepherd, is here.
+
+Walking towards the porous barn you recognize a beardy man with a dog nearby.
+The man does not seem pretty chatty.
+Nevertheless, he hands you a bag with sticks and a hilt.
+
+Take sticks and a hilt
+> You take a bag with sticks and a hilt from Typhon.
+
+> Go West
+
+(Castle) Look around
+You look around...
+
+You reach the castle after a long way across the mountains.
+It is surrounded by a crowdy town full of houses and a market with shops.
+The citizens there are selling food and other stuff.
+You can hear a ringing anvil from a blacksmith in a tent near the market.
+
+> Go to the tent
+
+!The blacksmith is here, swinging his hammer.
+
+You enter the tent and tell the blacksmith of the occurrences in the forest.
+He talks to you.
+
+"Haha, fighting against the Master of Forest with this puny equipment is suicide.
+I can craft you a strong sword... but only with some good raw materials.
+Bring them to me if you have them."
+
+!A nobleman is walking by.
+
+"I heard that you fought against Ghorkan.
+Everyone who loses is cursed by a ban... only if you defeat him you will be free of this ban.
+A sword made by the rare jewel steel is able to kill him.
+Luckily I have a bag of it.
+To get the jewel steel, you have to do me a favour.
+For this issue you will need some torches and flint. I will wait for you in the castle."
+
+Take torches and flint
+> You take a bag with torches and flint from the nobleman
+
+Task: "Kill the black knight in the cave in the north, he has murdered
+the whole family of the nobleman long time ago."
+
+> Go North
+
+(Cave) Look around
+You look around...
+
+On the way to the cave some stormy clouds rise along the sky and it begins to rain.
+The rising storm makes it hard to find the entrance of the dark cave.
+As you enter the moisty cave, you take a torch to have a better look in it.
+Bones are on the ground and is very spooky.
+You walk deeper in the cave and discover a small light at the end of a passage.
+Breathing is getting harder for you...
+
+!Dain, the dark knight, is here.
+
+"You little chap... it was a fault to come here.
+Your fate will be the same as the ones who got here before."
+
+After a long fight you kill the black knight. With blood all around you take
+the helmet of the black knight as a proof for the nobleman.
+
+Take black helmet
+> You take the black helmet in your bag
+
+> Go West
+
+(Castle) Look around
+You look around...
+
+Really exhausted you reach the castle.
+The nobleman opens the door and is surprised.
+
+"You really killed Dain?! You have my respect. I instructed many other people before to kill him.
+No one ever came back to me...
+Here is the promised jewel steel, do not waste it"
+
+Take jewel steel
+> You take the bag with jewel steel from the nobleman
+
+> Go to the tent of the blacksmith
+
+To craft the incredible sword out of the rare material, you give some sticks,
+the hilt and the jewel steel to the blacksmith.
+
+"Crafting this sword will take a while, the steel needs a certain temperature."
+
+After some hours, the blacksmith finished crafting the sword. He comes out of his
+tent and hands it to you.
+
+Take the sword
+> You take the sword from the blacksmith
+
+> Go South
+
+(Forest) Look around
+You look around...
+
+!Ghorkan, the Master of Forest, is here.
+
+You enter the foreboding forest...
+Your heartbeat is going faster and faster thinking of the last time here.
+It is getting dark, the trees, stones and creatures within the forest cast shadows.
+And then you recognize the same sparkle in the darkness. Ghorkan, he is there.
+You take a deep breath, take your new sword in the hand and walk towards him.
+
+"You again, was last time not enough for you?
+This time you won't get out of here alive."
+
+With a great hit into Ghorkan's heart you made it to kill the Master of Forest.
+Concurrently, the ban of Ghorkan that layed on you was gone and the forest was full of life with peaceful animals.
