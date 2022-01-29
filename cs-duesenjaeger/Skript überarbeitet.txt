@@ -1,3 +1,4 @@
+Writer: Lucas Greubel
 *Notes for Devs
 
 Story Introduction: 
@@ -16,7 +17,7 @@ ________________________________________________________________________________
 8. go east the south -> use item "rare sword" on ghorkan -> CREDITS
 _____________________________________________________________________________________________________________________________________________________________________________________________________________ 
 *Inventory(use)	-torches and flint
-		Description: some torches and flint to light the up
+		Description: some torches and flint to light them up
 		-sword
 		Description: your old but trusty adventurers blade, it is pretty worn out
 		-rare sword
@@ -242,7 +243,7 @@ ________________________________________________________________________________
 	   - need to add an easteregg (probably hidden dialogue prompt with an object, for example: trying to talk to Typhon or Ghorkan multiple times to annoy them)
 	   - command in castle regarding "talk to noblemen" if he "leaves" you can still talk to him (makes little sense)
 _____________________________________________________________________________________________________________________________________________________________________________________________________________ 
-
+Writer: Kevin Spomer
 *Original Plain Script (walkthrough order)
 
 (Plains) Look around
