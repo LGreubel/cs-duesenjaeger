@@ -51,10 +51,10 @@ Working Commands: !LOOK: around
 			A misty and dead forest stretches across the southern horizon and there is a barn made out of brittle wood in the east.
 *GO
 		  !GO: north, south, east, west 
-		      ... you wander north
-		      ... you wander south
-		      ... you wander east
-		      ... you wander west	
+		      ... you wander north.
+		      ... you wander south.
+		      ... you wander east.
+		      ... you wander west.	
 
  - Forest(South)
 Purpose:
@@ -71,6 +71,17 @@ Working Commands: !LOOK: around
 *TALK
 		    !TALK: to (Ghorkan)
 		    ... you try to reason with Ghorkan, he seems a bit irritated but ignores you. 
+		    
+		    !TALK: to (Ghorkan)	(5x Times in a Row) (teleports you to the castle)	-> EASTER EGG    
+		    ... "you're getting on my nerves now, get ready to die."!		    
+		        You can feel your arms getting heavy, legs unsteady, moms spaghetti. (You faint)
+		    	As you awaken you're surrounded by thick castle walls.
+			
+		    !TALK: to (Ghorkan) (after annoying him) (loses game!)			-> EASTER EGG    
+		    ... "you again, you're eager to die aren't you? This time I won't use the wrong spell again!"
+		        He chants the words "Expelliarmus" and you die.
+ 		    	*YOU ARE DEAD*
+		    
 *USE
 		    !USE: sword (Ghorkan)
 		    ...	your measly sword is useless against the evil Ghorkan and you are cursed by a ban.
@@ -130,7 +141,7 @@ Working Commands: !LOOK: around
 		   ... as you approach him he musters you up. After finishing he seems to leave without leaving you the chance to talk to him.	
 
 		  !TALK: to (Noblemen) (only works after leaving blacksmiths tent once)	
-		   ... have you already	avengend my family, if not don't bother me.
+		   ... have you already	avengend my family? If not don't bother me.
 		       He must be in the northern cave.	
 
 		  !TALK: to the (Noblemen) (after finishing his quest)
@@ -238,7 +249,7 @@ ________________________________________________________________________________
 *own notes
 -changes   - changed and added some dialogue
 	   - added some more command options
-!concerns  - concerned about dialogue options if game is played in different order (for example: ending prompt if you've never seen ghorkan, but strike him down with the enchanted sword)
+!concerns // concerned about dialogue options if game is played in different order (for example: ending prompt if you've never seen ghorkan, but strike him down with the enchanted sword) 
 	   - need to add an easteregg (probably hidden dialogue prompt with an object, for example: trying to talk to Typhon or Ghorkan multiple times to annoy them)
 	   - command in castle regarding "talk to noblemen" if he "leaves" you can still talk to him (makes little sense)
 _____________________________________________________________________________________________________________________________________________________________________________________________________________ 
