@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="cs-duesenjaeger" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-17" />
+    <option name="MAIN_CLASS_NAME" value="Main" />
+    <module name="cs-duesenjaeger" />
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
