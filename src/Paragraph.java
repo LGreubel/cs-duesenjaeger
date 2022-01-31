@@ -1,4 +1,3 @@
-import com.google.gson.Gson;
 
 public class Paragraph {
     private String paragraph;
