@@ -13,8 +13,16 @@ public class Savegame {
 
     }
 
-    public static String savegameList() {
-        return "";
+    public static boolean savegameList(File dir) {
+        File[] files = dir.listFiles();
+        if(files.length < 2) return true;
+        System.out.println("List of your savegames.");
+        if(files != null) {
+            for (int i = 0; i < files.length; i++) {
+                if(files[i].isFile()) System.out.println(files[i].getName());
+            }
+        }
+        return false;
     }
     public static boolean savegameExists(File dir)  {
         File[] files = dir.listFiles();

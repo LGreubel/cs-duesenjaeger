@@ -35,9 +35,14 @@ public class Functions {
         Gson gson = new Gson();
         return gson.toJson(object);
     }
+    public static Savegame fromJson(String jsonString, Savegame save) {
+        Gson gson = new Gson();
+    return gson.fromJson(jsonString, Savegame.class);
+    }
     public static boolean jsonWrite(String jsonString, String jsonPath) {
+        if(!jsonPath.endsWith(".json")) jsonPath = jsonPath + ".json";
         try {
-            BufferedWriter bw = new BufferedWriter(new FileWriter(jsonPath + ".json"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(jsonPath));
             bw.write(jsonString);
             bw.close();
         } catch (Exception e) {
@@ -47,10 +52,11 @@ public class Functions {
         return true;
     }
     public static String jsonRead(String jsonPath) {
+        if(!jsonPath.endsWith(".json")) jsonPath = jsonPath + ".json";
         String jsonString = "";
         try {
             String line;
-            BufferedReader br = new BufferedReader(new FileReader(jsonPath + ".json"));
+            BufferedReader br = new BufferedReader(new FileReader(jsonPath));
             while ((line = br.readLine()) != null) {
                 jsonString = jsonString + line;
             }
