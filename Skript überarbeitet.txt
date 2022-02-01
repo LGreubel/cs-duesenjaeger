@@ -243,14 +243,14 @@ Working Commands: !LOOK: around
 *USE
 		   !USE: Sword on Dain/Black Knight (get Black Helmet)
 		   ... After a hard and long fight you achieve to best the black knight. You gain some minor injuries but nothing drastic.
-		       With blood all splattered around you take the helmet of the black knight as a proof for the nobleman.
+		       With blood all splattered around you, you take the helmet of the black knight as proof for the nobleman.
 		       You take the black helmet and place it in your bag.		
 _____________________________________________________________________________________________________________________________________________________________________________________________________________ 
 *own notes
 -changes   - changed and added some dialogue
 	   - added some more command options
 !concerns // concerned about dialogue options if game is played in different order (for example: ending prompt if you've never seen ghorkan, but strike him down with the enchanted sword) 
-	   - need to add an easteregg (probably hidden dialogue prompt with an object, for example: trying to talk to Typhon or Ghorkan multiple times to annoy them)
+	  //  need to add an easteregg (probably hidden dialogue prompt with an object, for example: trying to talk to Typhon or Ghorkan multiple times to annoy them)
 	   - command in castle regarding "talk to noblemen" if he "leaves" you can still talk to him (makes little sense)
 _____________________________________________________________________________________________________________________________________________________________________________________________________________ 
 
