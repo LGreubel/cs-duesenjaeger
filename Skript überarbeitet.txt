@@ -140,7 +140,7 @@ Working Commands: !LOOK: around
 		  !TALK: to (Noblemen)/(men)
 		   ... as you approach him he musters you up. After finishing he seems to leave without leaving you the chance to talk to him.	
 
-		  !TALK: to (Noblemen) (only works after leaving blacksmiths tent once)	
+		  !TALK: to (Noblemen) (only works after telling blacksmith about Ghorkan)	
 		   ... have you already	avengend my family? If not don't bother me.
 		       He must be in the northern cave.	
 
@@ -166,7 +166,7 @@ Working Commands: !LOOK: around
 		       In the midst of it all is brawny, long bearded dwarf.
 		       !The blacksmith is here, swinging his hammer.
 *GO
-		       !GO: outside(1st time)
+		       !GO: outside(1st time after telling blacksmith about Ghorkan)
 		   ... as you leave the tent.
 		       !A nobleman is walking by.
 		       "I heard that you fought against Ghorkan.
