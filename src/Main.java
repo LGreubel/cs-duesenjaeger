@@ -5,10 +5,20 @@ public class Main {
     public static Scanner sc = new Scanner(System.in);
     public static String savegameDir = "savegames\\";
     public static void main(String[] args) {
+        Story story = new Story(" cs-duesenjaeger", new String[]{"Lucas Greubel", "Kevin Spomer"},
+                new String[]{"Maximilian Krönung", "Kevin Spomer", "Laurin Ludwig", "Marvin Rentsch"});
+
+
         Savegame save = new Savegame();
         Command cmd = new Command();
         if(titleScreen().equals("create")) save = savegameCreate();
         else save = savegameLoad();
+
+        //String JsonString = Functions.toJson(story);
+        //Functions.jsonWrite(JsonString,"story.json");
+
+
+
 
         //Here the game beginns
         String userinput;
@@ -19,13 +29,13 @@ public class Main {
             if(Functions.commandCheck(userinput)) {
                 cmd.setName(userinput);
                 Functions.commandExecution(cmd);
+
             }
         } //Gameloop-END
         System.out.println("Congratiualtions. You have made it. nice...");
         System.out.println("");
         sc.close();
     }
-
     public static String titleScreen() {
         File file = new File(savegameDir);
         String userInput;
@@ -54,7 +64,6 @@ public class Main {
             else if(userInput.equalsIgnoreCase("create")) return "create";
         }
     }
-
     public static Savegame savegameCreate() {
         Savegame save = new Savegame();
         //Default starting-values!!!
@@ -77,15 +86,22 @@ public class Main {
     public static Savegame savegameLoad() {
         File file = new File(savegameDir);
         Savegame save = new Savegame();
-        Savegame.savegameList(file);
-        System.out.print("Select your savegame by name (no .json): ");
-        String userInput = sc.nextLine();
-        if(userInput.endsWith(".json")) save.setSavegamePath(savegameDir + userInput);
-        else save.setSavegamePath(savegameDir + userInput + ".json");
+
+        if(Savegame.savegameShowLoad(file)) {//Multiple savegames
+            System.out.println("List of your savegames.");
+            Savegame.savegameList(file);
+            System.out.print("Select your savegame by name: ");
+            String userInput = sc.nextLine();
+            if(userInput.endsWith(".json")) save.setSavegamePath(savegameDir + userInput);
+            else save.setSavegamePath(savegameDir + userInput + ".json");
+
+        } else {//Single savegame
+            File[] files = file.listFiles();
+            save.setSavegamePath(savegameDir + files[0].getName());
+        }//Savegame loading
         String jsonString = Functions.jsonRead(save.getSavegamePath());
-        save = Functions.fromJson(jsonString, save);
         System.out.println("You have selected the savegame: " + save.getSavegamePath().substring(10));
         System.out.println("Have fun while playing");
-        return save;
+        return Functions.fromJson(jsonString, save);
     }
 }

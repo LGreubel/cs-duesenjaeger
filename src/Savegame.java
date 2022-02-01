@@ -9,20 +9,27 @@ public class Savegame {
     private int[] playerPosition;
     private String savegamePath;
 
+
+    public Savegame(int playerHealth) {
+        setPlayerHealth(playerHealth);
+    }
     public Savegame() {
 
     }
-
-    public static boolean savegameList(File dir) {
+    public static boolean savegameShowLoad(File dir) {
         File[] files = dir.listFiles();
-        if(files.length < 2) return true;
-        System.out.println("List of your savegames.");
+        if(files.length > 1) return true;
+    return false;
+    }
+
+    public static File[] savegameList(File dir) {
+        File[] files = dir.listFiles();
         if(files != null) {
             for (int i = 0; i < files.length; i++) {
                 if(files[i].isFile()) System.out.println(files[i].getName());
             }
         }
-        return false;
+        return files;
     }
     public static boolean savegameExists(File dir)  {
         File[] files = dir.listFiles();

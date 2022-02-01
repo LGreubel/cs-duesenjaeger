@@ -33,7 +33,7 @@ public class Functions {
     }
     public static String toJson(Object object) {
         Gson gson = new Gson();
-        return gson.toJson(object);
+        return gson.toJson(object).trim();
     }
     public static Savegame fromJson(String jsonString, Savegame save) {
         Gson gson = new Gson();
