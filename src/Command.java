@@ -9,7 +9,7 @@ public class Command {
     String help() {
         String helptext = "";
         helptext = helptext + "/go -  lets your character go in a specified direction\n";
-        helptext = helptext + "help - Shows the commandlist\n";
+        helptext = helptext + "/help - Shows the commandlist\n";
         helptext = helptext + "/look - to look in a specified direction\n";
         //helptext = helptext + "/map - will print the gamemap on the console\n";
         helptext = helptext + "/quit - will shutdown the game properly\n";

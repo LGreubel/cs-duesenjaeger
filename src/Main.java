@@ -9,19 +9,16 @@ public class Main {
         Gson gson = new Gson();
         Story story = gson.fromJson(Functions.jsonRead("story.json"), Story.class);
 
-        Story.Storycontent p1 = new Story.Storycontent("this", "lalala", "lelele",
-                "dein Mutter", "dein Vater", "das Kind", "eine Mülldeponie", 666);
+        //Story.Storycontent p1 = new Story.Storycontent("this", "lalala", "lelele",
+        //        "dein Mutter", "dein Vater", "das Kind", "eine Mülldeponie", 666);
 
-        Story.Storycontent content = new Story.Storycontent();
         Savegame save = new Savegame();
         Command cmd = new Command();
         if(titleScreen().equals("create")) save = savegameCreate();
         else save = savegameLoad();
+        System.out.println("");
 
-
-
-        System.out.println(content.getContent());
-
+        System.out.println(story.getStoryContents(0).getContent());
 
 
         //Here the game beginns
