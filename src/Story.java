@@ -11,6 +11,9 @@ public class Story {
         private String view;
         private int id;
 
+        public Storycontent() {
+
+        }
         public Storycontent(String location, String content, String contentGO, String contentUSE,
                             String contentTALK, String contentTAKE, String view, int id) {
             setLocation(location);
@@ -22,9 +25,7 @@ public class Story {
             setView(view);
             setId(id);
         }
-        public Storycontent() {
 
-        }
         //setter methods
         public void setLocation(String location) {this.location = location;}
         public void setContent(String content) {this.content = content;}
@@ -55,6 +56,7 @@ public class Story {
     public Story(String storyName, String[] authors, String[] developers) {
         setStoryName(storyName);
         setAuthors(authors);
+        setDevelopers(developers);
     }
     //setter methods
     public void setStoryName(String storyName) {this.storyName = storyName;}

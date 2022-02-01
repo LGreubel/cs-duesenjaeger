@@ -9,10 +9,6 @@ public class Savegame {
     private int[] playerPosition;
     private String savegamePath;
 
-
-    public Savegame(int playerHealth) {
-        setPlayerHealth(playerHealth);
-    }
     public Savegame() {
 
     }
@@ -21,7 +17,6 @@ public class Savegame {
         if(files.length > 1) return true;
     return false;
     }
-
     public static File[] savegameList(File dir) {
         File[] files = dir.listFiles();
         if(files != null) {
@@ -40,7 +35,6 @@ public class Savegame {
         }
         return false;
     }
-
     //setter methods
     public void setPlayerHealth(int playerHealth) {this.playerHealth = playerHealth;}
     public void setPlayerHealthMAX(int playerHealthMAX) {this.playerHealthMAX = playerHealthMAX;}
@@ -48,13 +42,11 @@ public class Savegame {
     public void setPlayerLevel(int playerLevel) {this.playerLevel = playerLevel;}
     public void setPlayerName(String playerName) {this.playerName = playerName;}
     public void setPlayerPosition(int[] playerPosition) {this.playerPosition = playerPosition;}
-
     public void setSavegamePath(String savegamePath) {this.savegamePath = savegamePath;}
     //getter methods
     public int getPlayerHealth() {return this.playerHealth;}
     public int getPlayerHealthMAX() {return this.playerHealthMAX;}
     public String[] getPlayerInventory() {return this.playerInventory;}
     public String getPlayerName() {return this.playerName;}
-
     public String getSavegamePath() {return this.savegamePath;}
 }

@@ -8,7 +8,7 @@ public class Functions {
             case "/go": cmd.go(); break;
             case "/use": cmd.use(); break;
             case "/look": cmd.look(); break;
-            case "/map": cmd.map(); break;
+            //case "/map": cmd.map(); break;
             case "/inv": cmd.inv(); break;
             case "/save": cmd.save(); break;
             case "/quit":   cmd.quit(); break;
@@ -21,7 +21,7 @@ public class Functions {
             case "/go":     return true;
             case "/use":    return true;
             case "/look":   return true;
-            case "/map":    return true;
+            case "/map":    return false;
             case "/inv":    return true;
             case "/save":   return true;
             case "/quit":   return true;

@@ -8,7 +8,11 @@ public class Main {
     public static void main(String[] args) {
         Gson gson = new Gson();
         Story story = gson.fromJson(Functions.jsonRead("story.json"), Story.class);
-        //List<Story.Storycontent> content = (List<Story.Storycontent>) gson.fromJson(Functions.jsonRead("story.json"), Story.Storycontent.class);
+
+        Story.Storycontent p1 = new Story.Storycontent("this", "lalala", "lelele",
+                "dein Mutter", "dein Vater", "das Kind", "eine Mülldeponie", 666);
+
+        Story.Storycontent content = new Story.Storycontent();
         Savegame save = new Savegame();
         Command cmd = new Command();
         if(titleScreen().equals("create")) save = savegameCreate();
@@ -16,7 +20,7 @@ public class Main {
 
 
 
-        //System.out.println(content.get(0).getId());
+        System.out.println(content.getContent());
 
 
 
@@ -25,6 +29,7 @@ public class Main {
         boolean hasWon = false;
         //Gameloop-START
         while (!hasWon) {
+            userinput = "";
             userinput = sc.nextLine();
             if(Functions.commandCheck(userinput)) {
                 cmd.setName(userinput);
@@ -32,7 +37,7 @@ public class Main {
 
             }
         } //Gameloop-END
-        System.out.println("Congratiualtions. You have made it. nice...");
+        System.out.println("Congratulations. You have made it. nice...");
         System.out.println("");
         sc.close();
     }
@@ -93,7 +98,7 @@ public class Main {
         System.out.println("You are about to create a new savegame.");
         save.setPlayerHealth(10);
         save.setPlayerHealthMAX(10);
-        save.setPlayerInventory(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"});
+        save.setPlayerInventory(new String[]{"Sword", "", "", "", "", "", "", "", ""});
         save.setPlayerLevel(1);
         System.out.print("\nEnter your nickname: ");
         save.setPlayerName(sc.nextLine());

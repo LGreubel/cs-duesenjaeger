@@ -11,7 +11,7 @@ public class Command {
         helptext = helptext + "/go -  lets your character go in a specified direction\n";
         helptext = helptext + "help - Shows the commandlist\n";
         helptext = helptext + "/look - to look in a specified direction\n";
-        helptext = helptext + "/map - will print the gamemap on the console\n";
+        //helptext = helptext + "/map - will print the gamemap on the console\n";
         helptext = helptext + "/quit - will shutdown the game properly\n";
         helptext = helptext + "/save - saves your current gamestatus\n";
         helptext = helptext + "/talk - talk to given person\n";
@@ -24,7 +24,7 @@ public class Command {
     void talk() {}
     void use() {}
     void look() {}
-    void map() {}
+    //void map() {}
     void inv() {}
     void save() {
         System.out.println("Your game will be saved now.");
@@ -32,9 +32,11 @@ public class Command {
     void quit() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Do you really want to leave the game? (yes/no): ");
-        if (sc.nextLine().equals("yes")) System.out.println("quit game.");
+        if (sc.nextLine().equals("yes")) {
+            System.out.println("quit game.");
+            System.exit(0);
+        }
         sc.close();
-        System.exit(0);
     }
 
 
