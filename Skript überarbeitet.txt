@@ -17,7 +17,7 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________________________________________________________ 
 *Inventory(use)	-torches and flint
 		Description: some torches and flint to light them up
-		-sword
+		-sword (Startitem)
 		Description: your old but trusty adventurers blade, it is pretty worn out
 		-rare sword
 		Description: a sword made of jeweled steel, with a dark ouk wood handle and a dwarven hilt
