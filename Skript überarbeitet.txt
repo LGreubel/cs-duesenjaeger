@@ -210,7 +210,8 @@ Working Commands: !LOOK: around
 Purpose:
 	entering the cave to slay "Dain The Black Knight"
 Working Commands: !LOOK: around 
-		   ... On the way to the cave some stormy clouds rise along the sky and rain begins to pour down.
+		   ... You look around...
+		       On the way to the cave some stormy clouds rise along the sky and rain begins to pour down.
 		       The rising storm made it hard to find the entrance of the dark cave. 
 		       The inside of the cave is so dark, that as you stretch your arm inside you lose sight of it.
 *GO
@@ -230,7 +231,8 @@ Working Commands: !LOOK: around
 Purpose:
 	slay "Dain the black knight", get ITEM "black helmet" for the noblemen
 Working Commands: !LOOK: around 
-		   ... You see a small fireplace that reveals a man from head to toe clad in black.
+		   ... You look around...
+		       You see a small fireplace that reveals a man from head to toe clad in black.
 		       !Dain, the dark knight, is here.
 *GO
 		    !GO: outside
