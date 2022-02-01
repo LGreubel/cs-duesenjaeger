@@ -119,7 +119,7 @@ Working Commands: !LOOK: around
 		  !TAKE: sticks and hilt
 		   ... You take a bag with sticks and a hilt from Typhon.
 		       After you take them, he nods at you, like saying you'll need them.	
-- Castle(east)
+- Castle(West)
 Purpose:
 	Getting the quest to kill the "black knight" in the cave(north) by the noblemen for the ITEM "jewel steel" for the "rare sword",
 	Getting the ITEM "torches and flint" to enter the dark cave(north) 
