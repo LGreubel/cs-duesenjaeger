@@ -86,7 +86,7 @@ Working Commands: !LOOK: around
 		    !USE: sword (Ghorkan)
 		    ...	your measly sword is useless against the evil Ghorkan and you are cursed by a ban.
 
-		    !USE: enhanced sword (Ghorkan) (ENDING)
+		    !USE: rare sword (Ghorkan) (ENDING)
 		    ... You enter the foreboding forest...
 			Your heartbeat is getting faster and faster as you start thinking of the last time you've been here.
 			It is getting dark, the trees, stones and creatures within the forest cast wide shadows.
