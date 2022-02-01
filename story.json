@@ -2,21 +2,58 @@
   "storyName":" cs-duesenjaeger",
   "authors":["Lucas Greubel","Kevin Spomer"],
   "storyContents":
+
   [
-    {"location":"",
-      "content":"",
+    {"location":"Story Introduction",
+      "content":"Ghorkan the self proclaimed \"Master of the Forest\" claimed it for his own.\nDue to his accursed presence, the once full blooming forest is now bleak and lifeless.\nYou an adventurer take matters to your own hands to strike him down!",
       "view":"",
       "id":0},
     {
-      "location":"",
-      "content":"",
-      "view":"",
+      "location":"Plains(Middle)",
+      "contentGO":"(GO commands): Go north [moves to location 'cave']\n ...you wander north.\n Go south [moves to location 'forest']\n ... you wander south.\n Go east [moves to location 'barn']\n ... you wander east.\n Go west [moves to location 'castle']\n ... you wander west.",
+      "view":"You look around...\nAs you are standing on a great plain you can only see the blue sky with clouds.\nAfter looking around, you recognize a dark cave in the north.\nIn the west you can see a peaky castle behind some mountains.\nA misty and dead forest stretches across the southern horizon and there is a barn made out of brittle wood in the east.",
       "id":1
     },
     {
-      "location":"",
-      "content":"",
-      "view":"",
-      "id":2}
+      "location":"Forest(South)",
+      "contentGO":"(GO commands): Go north [moves to location 'plains']\n ...you wander away from this accursed forest.",
+      "contentUSE":"(USE commands): Use 'sword' Ghorkan [necessary for blacksmith]\n ... your measly sword is useless against the evil Ghorkan and you are cursed by a ban.\n\n Use 'rare sword' Ghorkan [wins game]\n You enter the foreboding forest...\nYour heartbeat is getting faster and faster as you start thinking of the last time you've been here.\nIt is getting dark, the trees, stones and creatures within the forest cast wide shadows.\nAnd then you recognize the same sparkle in the darkness. Ghorkan, he is there.\nYou take a deep breath, take your new sword to hand and walk towards him.\n \"You again\", he murmures, \"was last time not enough for you?\nThis time you won't get out of here alive.\"\n With a great thrust into Ghorkan's heart you achieved to kill the Master of Forest.\n Concurrently, the ban of Ghorkan that was layed upon you is now gone and the forest is once again full of life and the peaceful animals seem to return.",
+      "contentTALK":"(TALK commands): Talk to Ghorkan\n ... you try to reason with Ghorkan, he seems a bit irritated but ignores you.\n\n Talk to Ghorkan [5x times -> needs if+counter && moves to location 'castle']\n ... \"you're getting on my nerves now, get ready to die.\"!\n You can feel your arms getting heavy, legs unsteady, moms spaghetti. (You faint)\nAs you awaken you're surrounded by thick castle walls.\n Talk to Ghorkan [after annoying him -> kills you/quits game]\n ... \"you again, you're eager to die aren't you? This time I won't use the wrong spell again!\"He chants the words \"Expelliarmus\" and you die.\n*YOU ARE DEAD* \",",
+      "view":"You look around...\n As you wander further into the dark and gloomy forest the trees begin to look even worse, like they've gotten there life sucked out of them and the mist seems to thicken.\n You wander until you can make out a single person standing in the midst of it all. The air seems to get heavier.\n!Ghorkan, the Master of Forest, is here.",
+      "id":2},
+    {
+      "location":"Barn(East)",
+      "contentGO":"(GO commands): Go west [moves to location 'plains']\n ... you wander away from the barn towards the open plains.",
+      "contentTALK":"(TALK commands): Talk to Typhon\n ... he recognizes you, but does not seem to want to converse, odd fellow.",
+      "contentTAKE":"(TAKE Commands): Take 'sticks and hilt' [puts 'sticks and hilt' in inventory && necessary for 'rare sword']\n ... You take a bag with sticks and a hilt from Typhon.\n After you take them, he nods at you, like saying you'll need them.",
+      "view":"You look around...\n Walking towards the brittle barn you recognize a bearded man with a dog nearby.\n The man does not seem pretty chatty.\n Nevertheless, he hands you a bag with sticks and a hilt.\n !Typhon, a shepherd, is here.",
+      "id":3},
+    {
+      "location":"Castle(West)",
+      "contentGO":"(GO commands): Go east [moves to location 'plains']\n ... you traverse through the mountains back to the plains.\n\n Go to tent [moves location to 'tent']\n ... you enter the tent.",
+      "contentTALK":"(USE commands): Talk to Noblemen/man\n ... as you approach him he musters you up. After finishing he seems to leave without leaving you a chance to talk to him.\n\n Talk to Noblemen[works only after telling blacksmith of your fight with Ghorkan]\n ... have you already avengend my family? If not don't bother me.\n He must be in the northern cave.\n\n Talk to Noblemen [after finishing his quest]\n ... \"I wish you luck.\"",
+      "contentUSE":"(TALK Commands): Use 'black helmet' on Noblemen [puts 'jeweled steel' in inventory]\n ... \"You really killed Dain?! You have my respect. I've hired many others before to get my revenge.\n He bested them all, so no one ever came back to me...\n Here is the promised jewel steel, do not waste it\n I wish you luck.\"\n You take the jeweled steel.",
+      "view":"You look around...\nYou reach the castle after a long way across the mountains.\nIt is surrounded by a crowdy town full of houses and a market with shops.\nThe citizens there are selling food and other stuff.\nYou can hear a ringing anvil from a blacksmith in a tent near the market.\n!A man in posh expensive looking clothing is sitting near the tent, looking anxious.",
+      "id":4},
+    {
+      "location":"Tent(Castle)",
+      "contentGO":"(GO commands): Go 'outside'/'castle' [moves to location 'castle']\n ... you leave the tent.\n\n Go 'outside'/'castle' [after telling blacksmith about Ghorkan && puts 'torches and flint' in inventory]\n ... as you leave the tent.\n !A noblemen is walking by.\n \"I heard that you fought against Ghorkan.\n Everyone who loses is cursed by a ban... only if you defeat him you will be free of his ban.\n Only a sword made by the rare jewel steel is able to kill him.\n Luckily I have a bag of it.\n To get the jewel steel, you have to do me a favour.\n For this issue you will need some torches and flint. I will wait for you in the castle.\"\n >Task: \"Kill Dain the black knight in the cave in the north,\n he has murdered the whole family of the nobleman a long time ago.\"",
+      "contentUSE":"(USE Commands): Use 'sticks and hilt' & 'jeweled steel' [get 'rare sword', lose 'sticks and hilt' & 'jeweled steel' && also leaves tent]\n ...To craft the incredible sword out of the rare material,\n you give some sticks, the hilt and the jeweled steel to the blacksmith.\n After he examines the materials he nods and says:\n \"Crafting this sword will take a while, the steel needs a certain temperature.\"\n After some hours, the blacksmith finished crafting the sword.\n He comes out of tent and hands it to you.",
+      "contentTALK":"(TALK Commands): Talk to blacksmith\n ... you try to talk to the blacksmith, but he seems to be to focused in his craft.\n\n Talk to blacksmith [if used 'sword' on Ghorkan]\n  ... you tell the blacksmith of the occurrences in the forest.\n He talks to you.\n \"Haha, fighting against the Master of Forest with this puny equipment is suicide.\n I can craft you a strong sword... but only with some good raw materials.\n Bring them to me if you have them.\"\n\n Talk to blacksmith [after getting his quest}\n ... \"You have to fetch me quality materials, now hush don't disturb my work.\n\n Talk to blacksmith [after getting 'rare sword']\n ... \"You now have the best sword I've ever made. Put it to good use and slay this \"master\".\"",
+      "view":"You look around...\nAs you enter the tent, you can see the roaring flames and lots of crafted goods.\nIt reeks of coal, metal and sweat, it is incredibly hot inside.\nIn the midst of it all is brawny, long bearded dwarf.\n!The blacksmith is here, swinging his hammer.",
+      "id":5},
+    {
+      "location":"Cave(north)",
+      "contentGO":"(GO Commands): Go south [moves location to 'plains']\n ... you leave the cave behind and wander towards the plains.\n\n Go inside\n ... going without a light would be suicide.",
+      "contentUSE":"(USE Commands): Use 'torches and flint' [moves location to 'cave(inside)']\n ... As you enter the moisty cave, you take a torch to light up a shallow path.\n As you traverse further into the cave bones are spread around the ground and it kinda creeps you out.\n You walk deeper in the cave and discover a dim light at the end of a passage.\n As the air thins breathing is getting harder for you...",
+      "view":" You look around...\nOn the way to the cave some stormy clouds rise along the sky and rain begins to pour down.\nThe rising storm made it hard to find the entrance of the dark cave.\nThe inside of the cave is so dark, that as you stretch your arm inside you lose sight of it.",
+      "id":6},
+    {
+      "location":"Cave(inside)",
+      "contentGO":"(GO Commands): Go outside [moves location to 'cave']\n ... you leave the cave and return outside.",
+      "contentUSE":"(USE Commands): Use 'sword' on Dain/Black Knight [puts 'black helmet' in inventory]\n ...After a hard and long fight you achieve to best the black knight. You gain some minor injuries but nothing drastic.\n With blood all splattered around you, you take the helmet of the black knight as proof for the nobleman.\n You take the black helmet and place it in your bag.",
+      "contentTALK":"(TALK Commands): Talk to Dain/Black Knight\n ... As you open your mouth, he cuts you short and mutters.\n \"You little chap... it was a fault to come here.\n Your fate will be the same as the ones who got here before.\"",
+      "view":"You look around...\nYou see a small fireplace that reveals a man from head to toe clad in black.\n!Dain, the dark knight, is here.",
+      "id":7}
   ]
 }
