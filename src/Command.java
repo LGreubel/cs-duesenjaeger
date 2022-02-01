@@ -43,4 +43,3 @@ public class Command {
     //Getter Methods
     public String getName() {return this.name;}
 }
-

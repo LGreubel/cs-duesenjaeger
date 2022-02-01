@@ -35,7 +35,7 @@ public class Functions {
         Gson gson = new Gson();
         return gson.toJson(object).trim();
     }
-    public static Savegame fromJson(String jsonString, Savegame save) {
+    public static Savegame fromJson(String jsonString) {
         Gson gson = new Gson();
     return gson.fromJson(jsonString, Savegame.class);
     }

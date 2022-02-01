@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import java.io.File;
 import java.util.*;
 
@@ -5,17 +6,13 @@ public class Main {
     public static Scanner sc = new Scanner(System.in);
     public static String savegameDir = "savegames\\";
     public static void main(String[] args) {
-        Story story = new Story(" cs-duesenjaeger", new String[]{"Lucas Greubel", "Kevin Spomer"},
-                new String[]{"Maximilian Krönung", "Kevin Spomer", "Laurin Ludwig", "Marvin Rentsch"});
-
-
+        Gson gson = new Gson();
+        Story story = gson.fromJson(Functions.jsonRead("story.json"), Story.class);
         Savegame save = new Savegame();
         Command cmd = new Command();
         if(titleScreen().equals("create")) save = savegameCreate();
         else save = savegameLoad();
 
-        //String JsonString = Functions.toJson(story);
-        //Functions.jsonWrite(JsonString,"story.json");
 
 
 
@@ -102,6 +99,6 @@ public class Main {
         String jsonString = Functions.jsonRead(save.getSavegamePath());
         System.out.println("You have selected the savegame: " + save.getSavegamePath().substring(10));
         System.out.println("Have fun while playing");
-        return Functions.fromJson(jsonString, save);
+        return (Savegame) Functions.fromJson(jsonString);
     }
 }

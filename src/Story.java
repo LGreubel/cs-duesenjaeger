@@ -29,12 +29,13 @@ public class Story {
     private String[] developers;
     public ArrayList<Storycontent> storyContents = new ArrayList<Storycontent>();
 
+    public Story() {
+
+    }
+
     public Story(String storyName, String[] authors, String[] developers) {
         setStoryName(storyName);
         setAuthors(authors);
-        storyContents.add(new Story.Storycontent("","","",0));
-        storyContents.add(new Story.Storycontent("","","",1));
-        storyContents.add(new Story.Storycontent("","","",2));
     }
 
     //setter methods
