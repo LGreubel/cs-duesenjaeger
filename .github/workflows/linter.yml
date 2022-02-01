@@ -52,5 +52,6 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          VALIDATE_CLANG_FORMAT: true
-
+          LINTER_RULES_PATH: /
+          JAVA_FILE_NAME: sun_checks.xml
+          VALIDATE_JAVA: true
