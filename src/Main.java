@@ -39,11 +39,34 @@ public class Main {
     public static String titleScreen() {
         File file = new File(savegameDir);
         String userInput;
+        System.out.println("\n---------------------------------------------------             \\  \\             |\"\" \n" +
+                "|                __|__                            |              .  \\            |   : \n" +
+                "|         --o--o--(_)--o--o--                     |              `   \\           |     \n" +
+                "|            cs-duesenjaeger                      |               \\   \\          |    ;               +.\n" +
+                "|                                                 |                .   \\         |                   *._`-.\n" +
+                "|    --- Projektlead                              |                `    \\        |     :          .-*'  `. `.\n" +
+                "|      --- Lucas G.                               |                _\\    \\.__..--**--...L_   _.-*'      .'`*'\n" +
+                "|                                                 |               /  `*-._\\   -.       .-*\"*+._       .'\n" +
+                "|    --- Development management                   |              :        ``*-._*.     \\      _J.   .'           \n" +
+                "|      --- Marvin R.                              |          .-*'`*-.       ;     `.    \\    /   `.'             \n" +
+                "|                                                 |      .-*'  _.-*'.     .-'       `-.  `-.:   _.'`-.           \n" +
+                "|    --- Development                              |   +*' _.-*'      `..-'             `*-. `**'      `-.        \n" +
+                "|      --- Maximilian K. x Kevin S. x Laurin L.   |    `*'          .-'      ._            `*-._         `.      \n" +
+                "|                                                 |              .-'         `.`-.____..+-**\"\"'         .*\"`.    \n" +
+                "---------------------------------------------------         ._.-'          _.-*'':$$$;._$              /     `.  \n" +
+                "                                                         .-'  `.      _.-*' `*-.__T$P   `\"**--..__    :        `.\n" +
+                "                                                  .'..-'       \\_.-*'                            `\"**--..___.-*'\n");
         if(!Savegame.savegameExists(file)) {
-            System.out.println("Hello and Welcome.\n Thank you for checking our textadventure.");
-            return "create";
+            System.out.println(" Hello and Welcome.                               `. `.    _.-*'                                             \n" +
+                    " Thank you for checking out our textadventure.      `. `:*'\n" +
+                    "                                                       `. `.\n" +
+                    "                                                          `*");
+                        return "create";
         } else {
-            System.out.println("Welcome back. Do you want to load up a save or start a new one?");
+            System.out.println(" Welcome back.                                     `. `.    _.-*'                                             \n" +
+                    " Do you want to load up a save or start a new one?   `. `:*'\n" +
+                    "                                                       `. `.\n" +
+                    "                                                          `*");
             System.out.print("--> 'load' or 'create': ");
             userInput = sc.nextLine();
 
