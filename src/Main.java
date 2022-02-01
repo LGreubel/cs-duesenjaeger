@@ -8,12 +8,15 @@ public class Main {
     public static void main(String[] args) {
         Gson gson = new Gson();
         Story story = gson.fromJson(Functions.jsonRead("story.json"), Story.class);
+        //List<Story.Storycontent> content = (List<Story.Storycontent>) gson.fromJson(Functions.jsonRead("story.json"), Story.Storycontent.class);
         Savegame save = new Savegame();
         Command cmd = new Command();
         if(titleScreen().equals("create")) save = savegameCreate();
         else save = savegameLoad();
 
 
+
+        //System.out.println(content.get(0).getId());
 
 
 

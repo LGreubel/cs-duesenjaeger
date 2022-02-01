@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Story {
-    public class Storycontent {
+    public static class Storycontent {
         private String location;
         private String content;
         private String view;
@@ -13,6 +13,11 @@ public class Story {
             setView(view);
             setId(id);
         }
+
+        public Storycontent() {
+
+        }
+
         //setter methods
         public void setLocation(String location) {this.location = location;}
         public void setContent(String content) {this.content = content;}
