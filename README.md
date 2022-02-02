@@ -6,7 +6,7 @@ Besoffen wird nicht gecoded.
 # Scrum Rollen
 Product Owner:  Lucas Greubel
 
-Scrum Master: Marvin Rentsch (Vize)
+Scrum Master: Marvin Rentsch (man of honour)
 
 Developer:      Maximilian Krönung, Kevin Spomer, Laurin Ludwig
 
