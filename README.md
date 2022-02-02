@@ -18,7 +18,7 @@ Developer:      Maximilian Krönung, Kevin Spomer, Laurin Ludwig
 
 --> run .bat
 
-# ... if it does not work
+### ... if you can't run the .bat
 
 --> Start IntelliJ
 
