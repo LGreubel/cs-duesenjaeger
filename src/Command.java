@@ -20,7 +20,17 @@ public class Command {
     }
 
 //Unfinnished Commands
-    void go() {}
+    public boolean go() {
+        int id = Main.save.getLastSection();
+
+        System.out.println("Were do you wanna go?");
+        for (int i = 0; i < Main.story.getStoryContent(id).getId(i); i++) {
+            System.out.println(Main.story.getStoryContent(id).getId(i));
+        }
+        String location = Main.sc.nextLine();
+
+        return false;
+    }
     void talk() {}
     void use() {}
     void look() {}

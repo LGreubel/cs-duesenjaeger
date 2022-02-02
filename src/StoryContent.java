@@ -6,13 +6,13 @@ public class StoryContent {
     private String contentTALK;
     private String contentTAKE;
     private String view;
-    private int id;
+    private int[] id;
 
     public StoryContent() {
 
     }
     public StoryContent(String location, String content, String contentGO, String contentUSE,
-                        String contentTALK, String contentTAKE, String view, int id) {
+                        String contentTALK, String contentTAKE, String view, int id[]) {
         setLocation(location);
         setContent(content);
         setContentGO(contentGO);
@@ -31,7 +31,7 @@ public class StoryContent {
     public void setContentTALK(String contentTALK) {this.contentTALK = contentTALK;}
     public void setContentTAKE(String contentTAKE) {this.contentTAKE = contentTAKE;}
     public void setView(String view) {this.view = view;}
-    public void setId(int id) {this.id = id;}
+    public void setId(int id[]) {this.id = id;}
     //getter methods
     public String getLocation() {return this.location;}
     public String getContent() {return this.content;}
@@ -40,5 +40,5 @@ public class StoryContent {
     public String getContentTALK() {return this.contentTALK;}
     public String getContentTAKE() {return this.contentTAKE;}
     public String getView() {return this.view;}
-    public int getId() {return this.id;}
+    public int getId(int id) {return this.id[id];}
 }

@@ -35,6 +35,21 @@ public class Functions {
         Gson gson = new Gson();
         return gson.toJson(object).trim();
     }
+    public static int locationToid(String location) {
+        int RETURN = 0;
+        switch (location) {//bitte tolowercase
+            case "story introduction":  RETURN = 0; break;
+            case "plains":              RETURN = 1; break;
+            case "forest":              RETURN = 2; break;
+            case "barn":                RETURN = 3; break;
+            case "Castle":              RETURN = 4; break;
+            case "Tent":                RETURN = 5; break;
+            case "Mountains":           RETURN = 6; break;
+            case "Cave":                RETURN = 7; break;
+            default: System.err.println("Error: No area.");
+        }
+        return RETURN;
+    }
     public static Savegame fromJson(String jsonString) {
         Gson gson = new Gson();
     return gson.fromJson(jsonString, Savegame.class);

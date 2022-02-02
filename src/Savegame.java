@@ -8,6 +8,7 @@ public class Savegame {
     private String playerName;
     private int[] playerPosition;
     private String savegamePath;
+    private int lastSection;
 
     public Savegame() {
 
@@ -43,10 +44,12 @@ public class Savegame {
     public void setPlayerName(String playerName) {this.playerName = playerName;}
     public void setPlayerPosition(int[] playerPosition) {this.playerPosition = playerPosition;}
     public void setSavegamePath(String savegamePath) {this.savegamePath = savegamePath;}
+    public void setLastSection(int lastSection) {this.lastSection = lastSection;}
     //getter methods
     public int getPlayerHealth() {return this.playerHealth;}
     public int getPlayerHealthMAX() {return this.playerHealthMAX;}
     public String[] getPlayerInventory() {return this.playerInventory;}
     public String getPlayerName() {return this.playerName;}
     public String getSavegamePath() {return this.savegamePath;}
+    public int getLastSection() {return this.lastSection;}
 }
