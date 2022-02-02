@@ -11,6 +11,15 @@ Scrum Master: Marvin Rentsch (Vize)
 Developer:      Maximilian Krönung, Kevin Spomer, Laurin Ludwig
 
 # How to Run
+
+--> download the latest release
+
+--> extract the .zip it to a folder
+
+--> run .bat
+
+# ... if it does not work
+
 --> Start IntelliJ
 
 --> setup your gitintegration
