@@ -8,20 +8,21 @@ public class Savegame {
     private String playerName;
     private int[] playerPosition;
     private String savegamePath;
+    private int lastSection;
 
     public Savegame() {
 
     }
     public static boolean savegameShowLoad(File dir) {
         File[] files = dir.listFiles();
-        if(files.length > 1) return true;
-    return false;
+        assert files != null;
+        return files.length > 1;
     }
     public static File[] savegameList(File dir) {
         File[] files = dir.listFiles();
         if(files != null) {
-            for (int i = 0; i < files.length; i++) {
-                if(files[i].isFile()) System.out.println(files[i].getName());
+            for (File file : files) {
+                if (file.isFile()) System.out.println(file.getName());
             }
         }
         return files;
@@ -29,8 +30,8 @@ public class Savegame {
     public static boolean savegameExists(File dir)  {
         File[] files = dir.listFiles();
         if(files != null) {
-            for (int i = 0; i < files.length; i++) {
-                if(files[i].isFile()) return true;
+            for (File file : files) {
+                if (file.isFile()) return true;
             }
         }
         return false;
@@ -43,10 +44,12 @@ public class Savegame {
     public void setPlayerName(String playerName) {this.playerName = playerName;}
     public void setPlayerPosition(int[] playerPosition) {this.playerPosition = playerPosition;}
     public void setSavegamePath(String savegamePath) {this.savegamePath = savegamePath;}
+    public void setLastSection(int lastSection) {this.lastSection = lastSection;}
     //getter methods
     public int getPlayerHealth() {return this.playerHealth;}
     public int getPlayerHealthMAX() {return this.playerHealthMAX;}
     public String[] getPlayerInventory() {return this.playerInventory;}
     public String getPlayerName() {return this.playerName;}
     public String getSavegamePath() {return this.savegamePath;}
+    public int getLastSection() {return this.lastSection;}
 }

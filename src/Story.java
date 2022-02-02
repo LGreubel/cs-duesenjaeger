@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Story {
     private String storyName;
     private String[] authors;
@@ -16,14 +14,19 @@ public class Story {
         setDevelopers(developers);
         setStoryContents(storyContents);
     }
+    public static void StoryShow() {
+
+    }
+
     //setter methods
     public void setStoryName(String storyName) {this.storyName = storyName;}
-    public void setAuthors(String authors[]) {this.authors = authors;}
+    public void setAuthors(String[] authors) {this.authors = authors;}
     public void setDevelopers(String[] developers) {this.developers = developers;}
     public void setStoryContents(StoryContent[] storyContents) {this.storyContents = storyContents;}
     //getter methods
     public String getStoryName() {return this.storyName;}
     public String[] getAuthors() {return this.authors;}
     public String[] getDevelopers() {return this.developers;}
-    public StoryContent getStoryContents(int id) {return this.storyContents[id];}
+    public StoryContent[] getStoryContents() {return this.storyContents;}
+    public StoryContent getStoryContent(int id) {return this.storyContents[id];}
 }
