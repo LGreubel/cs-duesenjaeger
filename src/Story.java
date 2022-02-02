@@ -20,7 +20,7 @@ public class Story {
 
     //setter methods
     public void setStoryName(String storyName) {this.storyName = storyName;}
-    public void setAuthors(String authors[]) {this.authors = authors;}
+    public void setAuthors(String[] authors) {this.authors = authors;}
     public void setDevelopers(String[] developers) {this.developers = developers;}
     public void setStoryContents(StoryContent[] storyContents) {this.storyContents = storyContents;}
     //getter methods

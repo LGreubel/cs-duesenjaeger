@@ -6,7 +6,7 @@ public class Command {
     public Command() {
 
     }
-    String help() {
+    public String help() {
         String helptext = "";
         helptext = helptext + "/go -  lets your character go in a specified direction\n";
         helptext = helptext + "/help - Shows the commandlist\n";
@@ -19,27 +19,24 @@ public class Command {
         return helptext;
     }
 
-//Unfinnished Commands
-    public boolean go() {
+    public void go() {
         int id = Main.save.getLastSection();
 
         System.out.println("Were do you wanna go?");
         for (int i = 0; i < Main.story.getStoryContent(id).getId(i); i++) {
             System.out.println(Main.story.getStoryContent(id).getId(i));
         }
-        String location = Main.sc.nextLine();
-
-        return false;
+        //String location = Main.sc.nextLine();
     }
     void talk() {}
     void use() {}
     void look() {}
-    //void map() {}
+    void map() {}
     void inv() {}
     void save() {
         System.out.println("Your game will be saved now.");
     }
-    void quit() {
+    public void quit() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Do you really want to leave the game? (yes/no): ");
         if (sc.nextLine().equals("yes")) {
