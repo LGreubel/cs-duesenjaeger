@@ -12,14 +12,23 @@ public class Main {
     public static Story story = gson.fromJson(Functions.jsonRead("story.json"), Story.class);
     public static String savegameDir = "savegames\\";
 
+    public static int ghorkan = 0;
+    public static boolean rareSword = false;
+    public static boolean blacksmith = false;
+
     public static void main(String[] args) {
         Command cmd = new Command();
         if(titleScreen().equals("create")) save = savegameCreate();
         else save = savegameLoad();
         System.out.println("");
+
+
+
+
         storyIntroduction();
         System.out.println("Congratulations. You have made it. nice...");
         System.out.println("");
+
         sc.close();
     }
     public static void storyIntroduction() {
@@ -61,12 +70,12 @@ public class Main {
             }
             else if(userInput.equalsIgnoreCase("south")) {
                 System.out.println("[moves to location 'forest'] ...you wander south.");
-
+                textForest();
                 break;
             }
             else if(userInput.equalsIgnoreCase("east")) {
                 System.out.println("[moves to location 'barn'] ...you wander east.");
-
+                textBarn();
                 break;
             }
             else if(userInput.equalsIgnoreCase("west")) {
@@ -149,7 +158,98 @@ public class Main {
             }
         }
     }
+    public static void textBarn() {
+        System.out.println("Current location: Barn.");
+        System.out.println("");
 
+        System.out.println("You look around...\n" +
+                "Walking towards the brittle barn you recognize a bearded man with a dog nearby.\n" +
+                "The man does not seem pretty chatty.\n Nevertheless, he hands you a bag with sticks and a hilt.\n" +
+                "!Typhon, a shepherd, is here.\"");
+
+        System.out.println("You can \n" +
+                "--> \"go\" west. \n" +
+                "--> \"talk\" to Typhon\n" +
+                "--> \"take\" 'sticks and hilt'");
+
+        String userInput;
+
+        while (true) {
+            userInput = "";
+            userInput = sc.nextLine();
+            if(userInput.equalsIgnoreCase("go")) {
+                System.out.println("[moves to location 'plains']\n ... you wander away from the barn towards the open plains.");
+                textPlains();
+                break;
+            } else if (userInput.equalsIgnoreCase("take")) {
+                System.out.println("Take 'sticks and hilt' [puts 'sticks and hilt' in inventory && necessary for 'rare sword']\n" +
+                        "... You take a bag with sticks and a hilt from Typhon.\n" +
+                        " After you take them, he nods at you, like saying you'll need them.\"");
+            } else if (userInput.equalsIgnoreCase("talk")) {
+                System.out.println("Talk to Typhon\n ... he recognizes you, but does not seem to want to converse, odd fellow.\"");
+                sc.nextLine();
+                textBarn();
+                break;
+            }
+        }
+    }
+    public static void textForest() {
+        System.out.println("Current location: forest.");
+        System.out.println("");
+        System.out.println("You look around...\n" +
+                "As you wander further into the dark and gloomy forest the trees begin to look even worse, like they've gotten there life sucked out of them and the mist seems to thicken.\n " +
+                "You wander until you can make out a single person standing in the midst of it all. The air seems to get heavier.\n" +
+                "!Ghorkan, the Master of Forest, is here.");
+
+        System.out.println("You can\n" +
+                "--> go \"north\" into the plains.\n" +
+                "--> \"attack\" Ghorkan with your sword.\n" +
+                "--> \"talk\" to Ghorkan.");
+
+        String userInput;
+
+        while (true) {
+            userInput = "";
+            userInput = sc.nextLine();
+            if(userInput.equalsIgnoreCase("north")) {
+                System.out.println("[moves to location 'plains'] ...you wander away from this accursed forest.");
+                textPlains();
+                break;
+            } else if(userInput.equalsIgnoreCase("attack") & !rareSword) {
+                System.out.println("... your measly sword is useless against the evil Ghorkan and you are cursed by a ban.\n");
+                Main.blacksmith = true;
+                textForest();
+                break;
+            } else if(userInput.equalsIgnoreCase("attack") & rareSword) {
+                System.out.println("Use 'rare sword' Ghorkan [wins game]\n " +
+                        "You enter the foreboding forest...\n" +
+                        "Your heartbeat is getting faster and faster as you start thinking of the last time you've been here.\n" +
+                        "It is getting dark, the trees, stones and creatures within the forest cast wide shadows.\n" +
+                        "And then you recognize the same sparkle in the darkness. Ghorkan, he is there.\n" +
+                        "You take a deep breath, take your new sword to hand and walk towards him.\n \"" +
+                        "You again\", he murmures, \"was last time not enough for you?\n" +
+                        "This time you won't get out of here alive.\"\n " +
+                        "With a great thrust into Ghorkan's heart you achieved to kill the Master of Forest.\n " +
+                        "Concurrently, the ban of Ghorkan that was layed upon you is now gone and the forest is once again full of life and the peaceful animals seem to return.");
+                sc.nextLine();
+                break;
+            } else if(userInput.equalsIgnoreCase("talk") & ghorkan != 5) {
+                System.out.println("... you try to reason with Ghorkan, he seems a bit irritated but ignores you.\n"); ghorkan++;
+                sc.nextLine();
+                textForest();
+                break;
+
+            } else if (userInput.equalsIgnoreCase("talk") & ghorkan == 5) { //WIP
+                System.out.println("\"you're getting on my nerves now, get ready to die.\"!\n " +
+                        "You can feel your arms getting heavy, legs unsteady, moms spaghetti. (You faint)\n" +
+                        "As you awaken you're surrounded by thick castle walls.\n " +
+                        "Talk to Ghorkan [after annoying him -> kills you/quits game]\n ... \"" +
+                        "you again, you're eager to die aren't you? This time I won't use the wrong spell again!\"He chants the words \"Expelliarmus\" and you die.\n*YOU ARE DEAD*\"");
+
+                //break;
+            }
+        }
+    }
 
 
     public static String titleScreen() {
