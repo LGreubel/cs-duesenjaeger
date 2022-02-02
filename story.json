@@ -1,7 +1,7 @@
 {
   "storyName":" cs-duesenjaeger",
   "authors":["Lucas Greubel","Kevin Spomer"],
-  "developers":["Maximilian Krönung", "Kevin Spomer","Laurin Ludwig"],
+  "developers":["Maximilian Krönung","Kevin Spomer","Laurin Ludwig"],
   "storyContents":
   [
     {
@@ -65,7 +65,7 @@
       "id":5
     },
     {
-      "location":"Cave(north)",
+      "location":"Mountains(north)",
       "content": "",
       "contentGO":"(GO Commands): Go south [moves location to 'plains']\n ... you leave the cave behind and wander towards the plains.\n\n Go inside\n ... going without a light would be suicide.",
       "contentUSE":"(USE Commands): Use 'torches and flint' [moves location to 'cave(inside)']\n ... As you enter the moisty cave, you take a torch to light up a shallow path.\n As you traverse further into the cave bones are spread around the ground and it kinda creeps you out.\n You walk deeper in the cave and discover a dim light at the end of a passage.\n As the air thins breathing is getting harder for you...",
